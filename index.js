@@ -81,7 +81,7 @@ app.get("/", (req, res) =>
   res.status(200).send("Welcome to Grammar Checker!")
 );
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Grammar Checker Running on ${port}`);

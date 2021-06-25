@@ -1,4 +1,5 @@
-import { correct, Grammarly } from "@stewartmcgown/grammarly-api";
+import correct from "@stewartmcgown/grammarly-api";
+import Grammarly from "@stewartmcgown/grammarly-api";
 import express from "express";
 import cors from "cors";
 
@@ -77,7 +78,7 @@ app.get("/api/v1/check", async function (req, res) {
 });
 
 app.get("/", (req, res) =>
-  res.status(200).send("Welcome to Jaynil's Grammar Checker!")
+  res.status(200).send("Welcome to Grammar Checker!")
 );
 
 const port = process.env.PORT || 3000;

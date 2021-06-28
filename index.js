@@ -4,6 +4,7 @@ import cors from "cors";
 
 const app = express();
 
+
 app.use(cors());
 
 const getRequiredDetailsFromGrammarly = (response) => {
@@ -67,7 +68,8 @@ app.get("/api/v1/check", async function (req, res) {
     if (text.length > 0) {
       const results = await grammarly.analyse(text).then(correct);
       const finalResults = getRequiredDetailsFromGrammarly(results);
-      res.status(200).send(finalResults);
+      const frs = JSON.stringify(finalResults, null, 2)
+      res.status(200).send("<pre><code>"+frs+"</code></pre>");
     } else {
       res.status(200).send([]);
     }

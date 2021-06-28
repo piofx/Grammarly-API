@@ -1,5 +1,4 @@
-import correct from "@stewartmcgown/grammarly-api";
-import Grammarly from "@stewartmcgown/grammarly-api";
+import {correct,Grammarly} from "@stewartmcgown/grammarly-api";
 import express from "express";
 import cors from "cors";
 

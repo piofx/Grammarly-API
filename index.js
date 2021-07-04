@@ -54,7 +54,7 @@ const cleanOutput = (inputQuery) => {
   return inputQuery ? removeExtra(inputQuery) : inputQuery;
 };
 
-app.get("/api/v1/check", async function (req, res) {
+app.all("/api/v1/check", async function (req, res) {
   try {
     const grammarly = new Grammarly();
     // const grammarly = new Grammarly({

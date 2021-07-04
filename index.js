@@ -69,7 +69,7 @@ app.all("/api/v1/check", async function (req, res) {
       const results = await grammarly.analyse(text).then(correct);
       const finalResults = getRequiredDetailsFromGrammarly(results);
       const frs = JSON.stringify(finalResults, null, 2)
-      res.status(200).send("<pre><code>"+frs+"</code></pre>");
+      res.status(200).send(frs);
     } else {
       res.status(200).send([]);
     }
